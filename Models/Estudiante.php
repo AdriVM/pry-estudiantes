@@ -15,7 +15,10 @@
     }
 
     public function set($atributo, $contenido){
-      $this->atributo = $contenido;
+      //El ejemplo lo tiene así
+      //$this->atributo = $contenido;
+      //Pero la logica me dicta así:
+      $this->id = $contenido;
     }
 
     public function get($atributo){
@@ -23,7 +26,7 @@
     }
 
     public function listar(){
-      sql = "SELECT t1.*, t2.nombre as nombre_seccion FROM estudiantes t1 INNER JOIN secciones t2 ON t1.id_seccion = t2.id";
+      $sql = "SELECT t1.*, t2.nombre as nombre_seccion FROM estudiantes t1 INNER JOIN secciones t2 ON t1.id_seccion = t2.id";
       $datos = $this->con->consultaRetorno($sql);
       return $datos;
     }

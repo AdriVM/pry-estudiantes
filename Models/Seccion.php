@@ -41,7 +41,10 @@
     }
 
     public function view(){
-      
+      $sql = "SELECT * FROM secciones WHERE id = '{$this->id}'";
+      $datos = $this->con->consultaRetorno($datos);
+      $row = mysqli_fetch_assoc($datos);
+      return $row;
     }
   }
 ?>

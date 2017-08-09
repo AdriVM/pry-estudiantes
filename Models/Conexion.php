@@ -3,10 +3,10 @@
   class Conexion{
     //Atributos
     private $datos = array(
-      'host' => 'localhost:8080',
+      'host' => 'localhost',
       'user' => 'root',
       'pass' => '',
-      'db' => 'db_estudiantes'
+      'db' => 'bd_estudiantes'
     );
     private $con;
     //Metodos
