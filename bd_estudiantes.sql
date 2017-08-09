@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2017 a las 22:09:35
+-- Tiempo de generación: 10-08-2017 a las 00:46:32
 -- Versión del servidor: 10.0.17-MariaDB
 -- Versión de PHP: 5.5.30
 
@@ -32,8 +32,16 @@ CREATE TABLE `estudiantes` (
   `edad` int(11) NOT NULL,
   `promedio` double NOT NULL,
   `imagen` varchar(200) NOT NULL,
-  `id_seccion` int(11) NOT NULL
+  `id_seccion` int(11) NOT NULL,
+  `fecha` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `estudiantes`
+--
+
+INSERT INTO `estudiantes` (`id`, `nombre`, `edad`, `promedio`, `imagen`, `id_seccion`, `fecha`) VALUES
+(1, 'Cristian', 12, 34, '', 1, '2017-08-01 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -45,6 +53,13 @@ CREATE TABLE `secciones` (
   `id` int(11) NOT NULL,
   `nombre` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `secciones`
+--
+
+INSERT INTO `secciones` (`id`, `nombre`) VALUES
+(1, 'seccion1');
 
 --
 -- Índices para tablas volcadas
@@ -71,12 +86,12 @@ ALTER TABLE `secciones`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `secciones`
 --
 ALTER TABLE `secciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Restricciones para tablas volcadas
 --
