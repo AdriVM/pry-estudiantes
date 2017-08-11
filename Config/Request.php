@@ -16,13 +16,16 @@
         }else{
           $this->controlador = strtolower(array_shift($ruta));
         }
-        
+
         $this->metodo = strtolower(array_shift($ruta));
 
         if(!$this->metodo){
           $this->metodo = "index";
         }
         $this->argumento = $ruta;
+      }else{
+        $this->controlador = "estudiantes";
+        $this->metodo = "index";
       }
     }
 
