@@ -16,6 +16,5 @@
     }
   }
 
-  $estudiantes = new estudiantesController();
 
 ?>
