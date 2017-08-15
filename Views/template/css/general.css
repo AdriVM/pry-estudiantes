@@ -1,3 +1,16 @@
+body{
+  padding-top: 70px;
+}
+footer{
+  background-color: #EEE;
+  border-top: 10px solid #8BB;
+  font-size: 14px;
+  padding: 20px;
+  text-align: center;
+}
+.imagen-avatar{
+  width: 50px;
+}
 .titulo{
   text-align: center;
 }

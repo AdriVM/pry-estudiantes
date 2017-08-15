@@ -1,13 +1,17 @@
 <?php namespace Controllers;
 
+  use Models\Seccion as Seccion;
+
   Class seccionesController{
 
-    public function index(){
-      print "Hola soy el index de secciones";
-    }
+    private $secciones;
 
-    public function ver($num){
-      print "Eres el numero: " . $num;
+    public function __construct(){
+      $this->secciones = new Seccion();
+    }
+    public function index(){
+      $datos = $this->secciones->listar();
+      return $datos;
     }
   }
 
