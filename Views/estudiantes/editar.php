@@ -1,37 +1,39 @@
 <div class="container">
-  <h3 class="titulo">Agregar Estudiantes<hr></h3>
+  <h3 class="tittle">Editar Estudiante</h3>
   <div class="panel panel-success">
     <div class="panel-heading">
-      <h3 class="panel-title">Agregar Nuevo Estudiante</h3>
+      <h5 class="panel-title">Editar Estudiante</h5>
     </div>
     <div class="panel-body">
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+        <div class="col-md-3">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img class="img-responsive" src="<?php echo URL; ?>Views/template/imagenes/avatars/avatar1.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
             <div class="form-group">
               <label for="inputEmail" class="control-label">Nombre del Estudiante</label>
-              <input type="text" name="nombre" value="" class="form-control" required>
+              <input class="form-control" type="text" name="nombre" required>
             </div>
             <div class="form-group">
               <label for="inputEmail" class="control-label">Edad</label>
-              <input type="number" name="edad" value="" class="form-control" required>
+              <input class="form-control" type="number" name="edad" required>
             </div>
             <div class="form-group">
               <label for="inputEmail" class="control-label">Promedio</label>
-              <input type="number" name="promedio" value="" class="form-control" required>
+              <input class="form-control" type="number" name="promedio" required>
             </div>
             <div class="form-group">
               <label for="inputEmail" class="control-label">Seccion</label>
-              <select name="id_seccion" class="form-control" name="">
-                <?php while($row = mysqli_fetch_array($datos)){ ?>
-                  <option value="<?php echo $row['id']; ?>"> <?php echo $row['nombre'] ?> </option>
+              <select class="form-control" name="id_seccion">
+                <?php while($row = mysqli_fetch_array($variable)){ ?>
+                  <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                 <?php } ?>
               </select>
-            </div>
-            <div class="form-group">
-              <label for="inputEmail" class="control-label">Imagen</label>
-              <input type="file" name="imagen" value="" class="form-control" id="imagen">
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-success">Registrar</button>

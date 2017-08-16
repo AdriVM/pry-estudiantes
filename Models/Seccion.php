@@ -11,7 +11,7 @@
     }
 
     public function set($atributo, $contenido){
-      $this->atributo = $contenido;
+      $this->$atributo = $contenido;
     }
 
     public function get($atributo){

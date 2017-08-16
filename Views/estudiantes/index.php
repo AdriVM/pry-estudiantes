@@ -3,7 +3,7 @@
 
   <div class="panel panel-success">
     <div class="panel-heading">
-      <h5 class="panel-tittle">Listado de Estudiantes</h5>
+      <h3 class="panel-title">Listado de Estudiantes</h3>
     </div>
     <div class="panel-body">
       <table class="table table-striped table-hover">
@@ -13,6 +13,7 @@
             <th>Nombre</th>
             <th>Edad</th>
             <th>Promedio</th>
+            <th>Seccion</th>
             <th>Acción</th>
           </tr>
         </thead>
@@ -23,6 +24,7 @@
             <td><?php echo $row['nombre']; ?></td>
             <td><?php echo $row['edad']; ?></td>
             <td><?php echo $row['promedio']; ?></td>
+            <td><?php echo $row['nombre_seccion']; ?></td>
             <td><a class="btn btn-warning" href="<?php echo URL; ?>estudiantes/editar/<?php echo $row['id']; ?>">Editar</a>
                 <a class="btn btn-danger" href="<?php echo URL; ?>estudiantes/eliminar/<?php echo $row['id']; ?>">Eliminar</a>
             </td>
