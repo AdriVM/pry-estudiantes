@@ -16,9 +16,9 @@
 
     public function set($atributo, $contenido){
       //El ejemplo lo tiene así
-      //$this->atributo = $contenido;
+      $this->atributo = $contenido;
       //Pero la logica me dicta así:
-      $this->id = $contenido;
+      //$this->id = $contenido;
     }
 
     public function get($atributo){
