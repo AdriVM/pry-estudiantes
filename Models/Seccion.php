@@ -35,14 +35,14 @@
     }
 
     public function edit(){
-      $sql = "UPDATE FROM secciones SET nombre = '{this->nombre}'
+      $sql = "UPDATE secciones SET nombre = '{$this->nombre}'
               WHERE id = '{$this->id}'";
       $this->con->consultaSimple($sql);
     }
 
     public function view(){
       $sql = "SELECT * FROM secciones WHERE id = '{$this->id}'";
-      $datos = $this->con->consultaRetorno($datos);
+      $datos = $this->con->consultaRetorno($sql);
       $row = mysqli_fetch_assoc($datos);
       return $row;
     }
